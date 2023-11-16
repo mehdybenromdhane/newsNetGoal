@@ -12,7 +12,6 @@ export const getMatchesfootball = async () => {
     "https://api.football-data.org/v4/matches",
     options
   );
-
   return matchData.json();
 };
 
@@ -31,6 +30,7 @@ export const getMatchesfootballFinished = async () => {
     options
   );
 
+ 
   return matchData.json();
 };
 
@@ -48,6 +48,9 @@ export const filterLeague = async (filterData: string) => {
   const getData = filterPremierLeague.filter(
     (item) => item.competition.name === filterData
   );
+
+  console.log(getEnglishLeague);
+
   return getData;
 };
 
