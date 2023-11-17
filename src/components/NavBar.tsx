@@ -10,13 +10,14 @@ const Navbar: FC = () => {
       </Link>
       <Link
         href="/football/premier-league"
-        className="flex items-center space-x-2"
+        className="flex items-center space-x-2" 
       >
         <div className="relative w-[30px] h-[30px]">
           <Image
             src="/football-icon.png"
             alt="icon"
             fill
+            sizes="10"
             className="object-cover"
           />
         </div>

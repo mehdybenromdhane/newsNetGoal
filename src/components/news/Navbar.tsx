@@ -1,6 +1,9 @@
 "use client";
+
+
+import React from "react";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useState  } from "react";
 import SearchInput from "./SearchInput";
 
 import { motion } from "framer-motion";
@@ -8,54 +11,59 @@ import { usePathname } from "next/navigation";
 
 const links = [
   {
+    id:1,
     href: "/allnews/world",
     label: "World",
   },
-  {
+  {id:2,
     href: "/allnews/business",
     label: "Business",
   },
   {
+    id:3,
     href: "/allnews/science",
     label: "Science",
   },
-  {
+  {id:4,
     href: "/allnews/health",
     label: "Health",
   },
-  {
+  {id:5,
     href: "/allnews/ai",
     label: "Ai",
   },
-  {
+  {id:6,
     href: "/allnews/sports",
     label: "Sports",
   },
-  {
+  {id:7,
     href: "/allnews/books",
     label: "Books",
   },
-  {
+  {id:8,
     href: "/allnews/lifestyle",
     label: "Lifestyle",
   },
-  {
+  {id:9,
     href: "/allnews/food",
     label: "Food",
   },
   {
+    id:10,
     href: "/allnews/travel",
     label: "Travel",
   },
   {
+
+    id:11,
     href: "/allnews/bitcoin",
     label: "Bitcoin",
   },
-  {
+  {id:12,
     href: "/allnews/socialMedia",
     label: "Social Media",
   },
-  {
+  {id:13,
     href: "/allnews/esport",
     label: "E-Sport",
   },
@@ -74,6 +82,9 @@ const Navbar: FC = () => {
       <ul className="p-3 border-t  md:rounded-lg  rounded-t-lg  border-gray-300 mb-0 lg:mb-3 text-white w-auto  bg-[#04091e]">
         <li className="space-x-6   flex  md:flex text-lg    flex-wrap justify-between items-center  ">
           {links.map((link) => (
+
+<React.Fragment key={link.id}>
+
             <Link
               href={link.href}
               className="hover:font-bold  md:flex hidden hover:text-[#f6214b] relative "
@@ -86,6 +97,8 @@ const Navbar: FC = () => {
               )}
               {link.label}
             </Link>
+
+            </React.Fragment>
           ))}
           <div className="md:hidden flex items-center  my-3   ">
             <button
@@ -135,6 +148,7 @@ const Navbar: FC = () => {
         <div className="md:hidden  mb-7  ">
           <div className=" px-2 pt-2 pb-2 space-y-1 sm:px-3   bg-[#04091e]">
             {links.map((link) => (
+              <React.Fragment key={link.id}>
               <Link
                 href={link.href}
                 className="hover:font-bold   text-white block hover:text-[#f6214b] relative "
@@ -147,6 +161,8 @@ const Navbar: FC = () => {
                 )}
                 {link.label}
               </Link>
+              
+              </React.Fragment>
             ))}
           </div>
         </div>
