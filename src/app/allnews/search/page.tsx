@@ -2,8 +2,6 @@
 
 import Article from "@/components/news/Article";
 import { news } from "@/types";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";

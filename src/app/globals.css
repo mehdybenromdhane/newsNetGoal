@@ -2,7 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
 
-body {
-  background: #ecf0f1;
+    background: #ecf0f1;
+} 
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6; 
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+  
+  .tracking-in-contract {
+	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.products-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.skeleton {
+  border-radius: 0.25rem;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #FBECEB;
+  }
+  100% {
+    background-color:  #f6214b;
+  }
 }
