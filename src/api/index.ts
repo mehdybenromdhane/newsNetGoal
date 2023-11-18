@@ -10,7 +10,7 @@ const options: apiOptions = {
 export const getMatchesfootball = async () => {
   const matchData = await fetch(
     "https://api.football-data.org/v4/matches",
-    options
+    options 
   );
   return matchData.json();
 };
@@ -49,7 +49,6 @@ export const filterLeague = async (filterData: string) => {
     (item) => item.competition.name === filterData
   );
 
-  console.log(getEnglishLeague);
 
   return getData;
 };
