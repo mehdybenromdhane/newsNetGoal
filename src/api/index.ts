@@ -36,7 +36,7 @@ export const getMatchesfootballFinished = async () => {
 
 export const getNewsInfo = async () => {
   const newsData = await fetch(
-    `https://newsapi.org/v2/everything?apiKey=${process.env.NEXT_PUBLIC_API_TOKEN_NEWS}&q=soccer&pageSize=5`,
+    `https://gnews.io/api/v4/top-headlines?category=general&apikey=${process.env.NEXT_PUBLIC_API_TOKEN_NEWS}`,
     { next: { revalidate: 30 } }
   );
   return newsData.json();
@@ -56,9 +56,10 @@ export const filterLeague = async (filterData: string) => {
 
 export const getNewsTopHeadlines = async () => {
   const newsData = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_API_TOKEN_NEWS}`,
+"    https://saurav.tech/NewsAPI/top-headlines/category/health/in.json",
     { cache: "no-store" }
   );
+
 
   return newsData.json();
 };
@@ -70,3 +71,6 @@ export const getNewsSearch = async (keyword: string) => {
   );
   return newsData.json();
 };
+
+
+

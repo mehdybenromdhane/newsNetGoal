@@ -54,7 +54,7 @@ export type newsType = {
   urlToImage: string;
 };
 
-export type news = {
+export type articles = {
   source: {
     id: string;
     name: string;

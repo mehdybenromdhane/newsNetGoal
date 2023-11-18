@@ -1,7 +1,7 @@
-import { news } from "@/types";
+import { articles } from "@/types";
 
 export const removeDuplicateData = (articles: any) => {
-  const randomArticle: news[] = articles?.articles;
+  const randomArticle: articles[] = articles?.articles;
   const filterArticles = randomArticle?.filter(
     (article) => article?.source.id !== null
   );

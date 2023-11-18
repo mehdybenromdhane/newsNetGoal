@@ -1,9 +1,9 @@
-import { news } from "@/types";
+import { articles } from "@/types";
 import Image from "next/image";
 import Tag from "./Tag";
 import Link from "next/link";
 
-const RandomArticle = ({ data }: { data: news }) => {
+const RandomArticle = ({ data }: { data: articles }) => {
   return (
     <div className="flex justify-between gap-2 p-2 mb-4 border-b border-gray-300">
       <div>
@@ -20,7 +20,7 @@ const RandomArticle = ({ data }: { data: news }) => {
       <div className="relative w-[400px] h-[200px]">
         <Image
           src={`${
-            data?.urlToImage ? data?.urlToImage : "/img/news-u-logo.webp"
+            data?.image ? data?.image : "/img/news-u-logo.webp"
           }`}
           alt={data?.title}
           fill
