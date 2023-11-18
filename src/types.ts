@@ -67,3 +67,18 @@ export type articles = {
   publishedAt: string;
   content: string;
 };
+
+
+export type random = {
+
+    id: string;
+    name: string;
+    description: string;
+    url: string;
+    category:string,
+    language:string,
+    country:string,
+
+ 
+
+};

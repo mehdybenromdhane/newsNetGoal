@@ -29,7 +29,10 @@ const Article = ({ data }: { data: articles }) => {
           </Link>
         </div>
         <div className="flex space-x-4 px-5">
+        <Tag data={data?.author} />
+
           <Tag data={data?.title} />
+
           <Tag data={new Date(data?.publishedAt).toDateString()} />
         </div>
         <p className="text-sm p-5">{data?.content}</p>

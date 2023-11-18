@@ -54,10 +54,22 @@ export const filterLeague = async (filterData: string) => {
   return getData;
 };
 
+
+export const getRandomNews = async () => {
+  const randomArticle = await fetch(
+"   https://saurav.tech/NewsAPI/sources.json",
+    { cache: "no-store" }
+  );
+
+
+  return randomArticle.json();
+};
 export const getNewsTopHeadlines = async () => {
   const newsData = await fetch(
-"    https://saurav.tech/NewsAPI/top-headlines/category/health/in.json",
+"    https://saurav.tech/NewsAPI/everything/cnn.json",
     { cache: "no-store" }
+
+  
   );
 
 
@@ -66,8 +78,9 @@ export const getNewsTopHeadlines = async () => {
 
 export const getNewsSearch = async (keyword: string) => {
   const newsData = await fetch(
-    `https://newsapi.org/v2/everything?apiKey=${process.env.NEXT_PUBLIC_API_TOKEN_NEWS}&q=${keyword}&pageSize=10`,
-    { cache: "no-store" }
+    ` https://saurav.tech/NewsAPI/top-headlines/category/${keyword}/in.json`,
+
+  { cache: "no-store" }
   );
   return newsData.json();
 };

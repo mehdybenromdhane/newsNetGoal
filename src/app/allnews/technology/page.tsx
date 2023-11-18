@@ -2,8 +2,8 @@ import { getNewsSearch } from "@/api";
 import Article from "@/components/news/Article";
 import { removeDuplicateData } from "@/utils";
 
-const World = async () => {
-  const newsWorld = await getNewsSearch("world");
+const Business = async () => {
+  const newsWorld = await getNewsSearch("technology");
   const filterArticles = removeDuplicateData(newsWorld);
 
   return (
@@ -17,4 +17,4 @@ const World = async () => {
   );
 };
 
-export default World;
+export default Business;

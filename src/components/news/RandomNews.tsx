@@ -1,17 +1,22 @@
-import { getNewsSearch } from "@/api";
+
+"use client";
+import { getNewsSearch, getRandomNews } from "@/api";
 import RandomArticle from "./RandomArticle";
-import { removeDuplicateData } from "@/utils";
+import { removeDuplicateData, removeDuplicateRandomData } from "@/utils";
 
 const RandomNews = async () => {
-  const randomNews = await getNewsSearch("random news");
-  const filterArticles = removeDuplicateData(randomNews);
+  const randomNews = await getRandomNews();
+  const filterArticles = removeDuplicateRandomData(randomNews);
+
+  console.log(filterArticles);
+  console.log("bon");
 
   return (
     <div className="w-[450px] border-l border-gray-300 basis-1/3 container mt-2  lg:mx-0 mx-auto">
-      <h1 className="pl-2 text-2xl font-semibold text-primary">Random News</h1>
-      {filterArticles?.map((article, idx) => (
-        <div key={`${article?.title}-${idx}`}>
-          <RandomArticle data={article} />
+      <h1 className="pl-2 text-2xl font-semibold text-primary">Channels News</h1>
+      {filterArticles.map((s, idx) => (
+        <div key={`${s.name}-${idx}`}>
+          <RandomArticle data={s} />
         </div>
       ))}
     </div>
