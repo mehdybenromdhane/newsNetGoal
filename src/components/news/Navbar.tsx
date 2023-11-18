@@ -4,7 +4,6 @@
 import React from "react";
 import Link from "next/link";
 import { FC, useState  } from "react";
-import SearchInput from "./SearchInput";
 
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -138,9 +137,7 @@ const Navbar: FC = () => {
               )}
             </button>
           </div>
-          <div className=" lg:mt-0 ">
-            <SearchInput />
-          </div>
+         
         </li>
       </ul>
 
