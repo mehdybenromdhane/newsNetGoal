@@ -20,7 +20,7 @@ const RandomArticle = ({ data }: { data: articles }) => {
       <div className="relative w-[400px] h-[200px]">
         <Image
           src={`${
-            data?.image ? data?.image : "/img/news-u-logo.webp"
+            data?.urlToImage ? data?.urlToImage : "/img/news-u-logo.webp"
           }`}
           alt={data?.title}
           fill
