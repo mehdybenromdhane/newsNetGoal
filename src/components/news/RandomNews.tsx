@@ -8,8 +8,6 @@ const RandomNews = async () => {
   const randomNews = await getRandomNews();
   const filterArticles = removeDuplicateRandomData(randomNews);
 
-  console.log(filterArticles);
-  console.log("bon");
 
   return (
     <div className="w-[450px] border-l border-gray-300 basis-1/3 container mt-2  lg:mx-0 mx-auto">

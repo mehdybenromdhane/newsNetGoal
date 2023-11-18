@@ -6,7 +6,6 @@ import Article from "./Article";
 const TopHeadlines = async () => {
   const newsTop = await getNewsTopHeadlines();
   const filterArticles = removeDuplicateData(newsTop);
-  console.log(filterArticles);
 
 
   return ( 
