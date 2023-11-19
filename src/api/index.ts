@@ -36,7 +36,7 @@ export const getMatchesfootballFinished = async () => {
 
 export const getNewsInfo = async () => {
   const newsData = await fetch(
-    `https://gnews.io/api/v4/top-headlines?category=general&apikey=${process.env.NEXT_PUBLIC_API_TOKEN_NEWS}`,
+    "https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json",
     { next: { revalidate: 30 } }
   );
   return newsData.json();

@@ -8,6 +8,8 @@ const News = async () => {
 
   const newsData: newsType[] = getNews.articles;
 
+
+
   return (
     <div className="md:w-[350px]  w-auto  h-max bg-primary rounded-md px-2 md:px-6 md:mx-0 py-2">
       <h1 className="text-xl text-white mt-2 font-bold mb-4">
